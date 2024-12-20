@@ -1,0 +1,55 @@
+alg_name: "ROME"
+model_name: "stanford-crfm/BioMedLM"
+stats_dir: "./data/stats"
+device: 0
+layers: [14]
+fact_token: "subject_last"
+v_num_grad_steps: 20
+v_lr: 5e-1
+v_loss_layer: 31
+v_weight_decay: 0.5
+clamp_norm_factor: 4
+kl_factor: 0.0625
+mom2_adjustment: false
+context_template_length_params: [[5, 10], [10, 10]]
+rewrite_module_tmp: "transformer.h.{}.mlp.c_proj"
+layer_module_tmp: "transformer.h.{}"
+mlp_module_tmp: "transformer.h.{}.mlp"
+attn_module_tmp: "transformer.h.{}.attn"
+ln_f_module: "transformer.ln_f"
+lm_head_module: "transformer.wte"
+mom2_dataset: "wikipedia"
+mom2_n_samples: 100000
+mom2_dtype: "float32"
+model_parallel: false
+max_length: 250
+
+# GPT2LMHeadModel(
+#   (transformer): GPT2Model(
+#     (wte): Embedding(28896, 2560)
+#     (wpe): Embedding(1024, 2560)
+#     (drop): Dropout(p=0.1, inplace=False)
+#     (h): ModuleList(
+#       (0-31): 32 x GPT2Block(
+#         (ln_1): LayerNorm((2560,), eps=1e-05, elementwise_affine=True)
+#         (attn): GPT2Attention(
+#           (c_attn): Conv1D()
+#           (c_proj): Conv1D()
+#           (attn_dropout): Dropout(p=0.1, inplace=False)
+#           (resid_dropout): Dropout(p=0.1, inplace=False)
+#         )
+#         (ln_2): LayerNorm((2560,), eps=1e-05, elementwise_affine=True)
+#         (mlp): GPT2MLP(
+#           (c_fc): Conv1D()
+#           (c_proj): Conv1D()
+#           (act): NewGELUActivation()
+#           (dropout): Dropout(p=0.1, inplace=False)
+#         )
+#       )
+#     )
+#     (ln_f): LayerNorm((2560,), eps=1e-05, elementwise_affine=True)
+#   )
+#   (lm_head): Linear(in_features=2560, out_features=28896, bias=False)
+# )
+
+
