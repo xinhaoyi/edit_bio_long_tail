@@ -208,13 +208,13 @@ def main():
     #===========================================#
     #              single processor             #
     #===========================================#
-    # print("Step 1: Extract the dictionary “mention2PMIDs” from pubtator.")
-    # pub_processor = PubtatorProcessor('mutation2pubtatorcentral')
-    # mention2PMIDs_name = f"{pub_processor.file_name}_mention2PMIDs.pickle"
-    # mention2PMIDs_path = os.path.join(pub_processor.data_process_path, mention2PMIDs_name)
-    # print(f"Loading mention2PMIDs from {mention2PMIDs_path}")
-    # mention2PMIDs: dict = pub_processor.load_mention2PMIDs_from_saved_file()
-    # file_name = pub_processor.file_name
+    print("Step 1: Extract the dictionary “mention2PMIDs” from pubtator.")
+    pub_processor = PubtatorProcessor('mutation2pubtatorcentral')
+    mention2PMIDs_name = f"{pub_processor.file_name}_mention2PMIDs.pickle"
+    mention2PMIDs_path = os.path.join(pub_processor.data_process_path, mention2PMIDs_name)
+    print(f"Loading mention2PMIDs from {mention2PMIDs_path}")
+    mention2PMIDs: dict = pub_processor.load_mention2PMIDs_from_saved_file()
+    file_name = pub_processor.file_name
     
     
     #===========================================#
@@ -452,18 +452,17 @@ if __name__ == "__main__":
     # a = 0
     
     #! release
-    # print("Extarct the \"triples\" from usml > SnomedCT.")
-    # save_usml_data_path = "/nfs/long_tail/my_datasets/usml"
-    # triples_save_path = os.path.join(save_usml_data_path, "triples.pickle")
-    # triples = pickle.load(open(triples_save_path, mode="rb"))
+    print("Extarct the \"triples\" from usml > SnomedCT.")
+    save_usml_data_path = "/nfs/long_tail/my_datasets/usml"
+    triples_save_path = os.path.join(save_usml_data_path, "triples.pickle")
+    triples = pickle.load(open(triples_save_path, mode="rb"))
     
-    # triples_set = set(triples)
+    triples_set = set(triples)
     
-    # print(f"n_triples is {len(triples)}")
-    # print(f"n_triples without duplication is {len(triples_set)}")
+    print(f"n_triples is {len(triples)}")
+    print(f"n_triples without duplication is {len(triples_set)}")
     
-    
-    # main()
+    main()
     
     
     # ========================== #

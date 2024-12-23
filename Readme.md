@@ -12,18 +12,18 @@ Our work operates in three main stages:
 2. **Knowledge Probing on Long-tail Biomedical Knowledge**: Assess LLMs' ability to recall and reason over long-tail biomedical knowledge using tailored evaluation prompts.
 3. **Knowledge Editing on Long-tail Biomedical Knowledge**: Apply editing techniques to enhance LLMs' performance on long-tail biomedical knowledge.
 
-
+edit_bio_long_tail/long-tail_example.pdf
 ### Overview
-![Overview](long-tail_example.pdf)
+![Overview](./long-tail_example.pdf)
 
 ## Prepare Data
 The data used in our experiments are publicly available:
 - [PubTator](https://hotpotqa.github.io/)
 - [SNOMED CT](https://github.com/Alab-NII/2WikiMultiHopQA)
 
-To preprocess the data:
+To preprocess the data and identify long-tail biomedical knowledge:
 ```bash
-python -m entity_linking_preprocess.umls_entity_linking.py
+python -m entity_linking_preprocess.pubmed_snomedCT_entity_linking
 python -m entity_linking_preprocess.generate_CliKT
 ```
 
