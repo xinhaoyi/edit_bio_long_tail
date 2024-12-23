@@ -21,15 +21,11 @@ The data used in our experiments are publicly available:
 - [PubTator](https://hotpotqa.github.io/)
 - [SNOMED CT](https://github.com/Alab-NII/2WikiMultiHopQA)
 
-To preprocess the data:
+To preprocess the data and identify long-tail biomedical knowledge:
 ```bash
-python preprocessing_data.py \
-    --dataset hotpotqa \
-    --raw_data_folder data/hotpotqa/raw_data \
-    --save_data_folder data/hotpotqa
+python -m entity_linking_preprocess.pubmed_snomedCT_entity_linking
+python -m entity_linking_preprocess.generate_CliKT
 ```
-- `--raw_data_folder`: Folder containing raw dataset.
-- `--save_data_folder`: Folder to save processed development and test sets.
 
 ## Experiments on Long-tail Biomedical Knowledge
 Our work includes two main experiments:
