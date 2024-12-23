@@ -14,7 +14,7 @@ Our work operates in three main stages:
 
 
 ### Overview
-![Overview](long-tail_overview.png)
+![Overview](./long-tail_overview.png)
 
 ## Prepare Data
 The data used in our experiments are publicly available:
