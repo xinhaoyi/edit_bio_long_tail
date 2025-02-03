@@ -12,9 +12,9 @@ Our work operates in three main stages:
 2. **Knowledge Probing on Long-tail Biomedical Knowledge**: Assess LLMs' ability to recall and reason over long-tail biomedical knowledge using tailored evaluation prompts.
 3. **Knowledge Editing on Long-tail Biomedical Knowledge**: Apply editing techniques to enhance LLMs' performance on long-tail biomedical knowledge.
 
-
+edit_bio_long_tail/long-tail_example.pdf
 ### Overview
-![Overview](./long_tail_overview.png)
+![Overview](/long-tail_example.pdf)
 
 ## Prepare Data
 The data used in our experiments are publicly available:
