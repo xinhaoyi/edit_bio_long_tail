@@ -14,7 +14,7 @@ Our work operates in three main stages:
 
 edit_bio_long_tail/long-tail_example.pdf
 ### Overview
-![Overview](/long-tail_example.pdf)
+![Overview](/long_tail_overview.png)
 
 ## Prepare Data
 The data used in our experiments are publicly available:
